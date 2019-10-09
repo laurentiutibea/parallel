@@ -13,7 +13,7 @@ class t_view{
 		document.getElementById("id_stop_button").addEventListener("click", this.stop.bind(this));
 		
 		this.canvas = document.getElementById("id_canvas");
-		this.context = canvas.getContext("2d");
+		this.context = this.canvas.getContext("2d");
 	}
 	//--------------------------------------
 	start(){

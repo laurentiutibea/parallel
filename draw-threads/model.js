@@ -1,4 +1,4 @@
-class t_model()
+class t_model
 {
 	angle;
 	my_worker;
@@ -30,7 +30,7 @@ class t_model()
 		this.id_timer = setInterval(this.start_draw_circle.bind(this), 100);			
 	}
 	//-------------------------------------------
-	start_draw_circle
+	start_draw_circle()
 	{
 		this._events.emit("angle_updated", this.angle);
 		this.angle.value++;
