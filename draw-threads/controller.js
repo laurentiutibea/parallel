@@ -1,4 +1,7 @@
 class t_controller{
+	view;
+	model;
+	//--------------------------------------
 	constructor(view, model)
 	{
 		var events_list_view = new t_list_of_events();
@@ -14,27 +17,27 @@ class t_controller{
 		this.model = model;
 		this.model.set_events(events_list_model);
 	}
-	
+	//--------------------------------------
 	on_start()
 	{
 		this.model.start();
 	}
-	
+	//--------------------------------------
 	on_stop()
 	{
 		this.model.stop();
 	}
-	
+	//--------------------------------------
 	on_prime_computed(number)
 	{
 		this.view.update_prime_number_para(number);
 	}
-	
+	//--------------------------------------
 	on_angle_updated(angle)
 	{
 		this.view.update_circle(angle);
 	}
-	
+	//--------------------------------------
 }
 
 const app = new t_controller(new t_view(), new t_model());
