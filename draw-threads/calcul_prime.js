@@ -12,7 +12,7 @@ onmessage = function(e){
 //-------------------------------------------
 function is_prim(n)
 {
-	for (var i = 2; i * i <= n; i++)
+	for (let i = 2; i * i <= n; i++)
 		if (n % i == 0)
 			return false;
 	return true;	
@@ -23,7 +23,7 @@ function calculeaza_prime(start_value)
 	if (stopped)
 		;
 	else{
-		for (var i = start_value; i < start_value + 1000; i++){
+		for (let i = start_value; i < start_value + 1000; i++){
 			if (is_prim(i))
 				postMessage(i);
 		}
